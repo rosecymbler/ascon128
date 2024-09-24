@@ -1,0 +1,97 @@
+# //  ModelSim SE-64 2020.4 Oct 13 2020 Linux 3.10.0-1160.102.1.el7.x86_64
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -L LIB_RTL LIB_BENCH.ascon_top_tb 
+# Start time: 17:55:00 on May 12,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "fsm(fast)".
+# Loading sv_std.std
+# Loading LIB_RTL.ascon_pack(fast)
+# Loading work.ascon_top_tb(fast)
+# Loading LIB_RTL.ascon_top(fast)
+# Loading LIB_RTL.permutation_xor_pour_fsm(fast)
+# Loading LIB_RTL.xor_up(fast)
+# Loading LIB_RTL.constant_addition(fast)
+# Loading LIB_RTL.substitution_layer(fast)
+# Loading LIB_RTL.sbox(fast)
+# Loading LIB_RTL.diffusion_layer(fast)
+# Loading LIB_RTL.xor_down(fast)
+# Loading LIB_RTL.register_state(fast)
+# Loading LIB_RTL.compteur_double_init(fast)
+# Loading LIB_RTL.fsm(fast)
+# Loading LIB_RTL.register_cipher(fast)
+# Loading LIB_RTL.register_tag(fast)
+add wave -position insertpoint  \
+sim:/ascon_top_tb/DUT/cipher_o_s \
+sim:/ascon_top_tb/DUT/cipher_state_o_s \
+sim:/ascon_top_tb/DUT/cipher_valid_o_s \
+sim:/ascon_top_tb/DUT/clock_i_s \
+sim:/ascon_top_tb/DUT/conf_xor_down_s \
+sim:/ascon_top_tb/DUT/data_valid_i_s \
+sim:/ascon_top_tb/DUT/data_xor_down_s \
+sim:/ascon_top_tb/DUT/data_xor_up_i_s \
+sim:/ascon_top_tb/DUT/ena_reg_state_s \
+sim:/ascon_top_tb/DUT/ena_round_s \
+sim:/ascon_top_tb/DUT/ena_xor_down_s \
+sim:/ascon_top_tb/DUT/ena_xor_up_s \
+sim:/ascon_top_tb/DUT/end_o_s \
+sim:/ascon_top_tb/DUT/init_a_s \
+sim:/ascon_top_tb/DUT/init_b_s \
+sim:/ascon_top_tb/DUT/input_select_s \
+sim:/ascon_top_tb/DUT/key_i_s \
+sim:/ascon_top_tb/DUT/nonce_i_s \
+sim:/ascon_top_tb/DUT/permutation_i_s \
+sim:/ascon_top_tb/DUT/permutation_o_s \
+sim:/ascon_top_tb/DUT/resetb_i_s \
+sim:/ascon_top_tb/DUT/round_s \
+sim:/ascon_top_tb/DUT/start_i_s \
+sim:/ascon_top_tb/DUT/tag_o_s
+add wave -position insertpoint  \
+sim:/ascon_top_tb/DUT/fsm_inst/next_state_s \
+sim:/ascon_top_tb/DUT/fsm_inst/current_state_s
+run 850 ns
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading LIB_RTL.ascon_pack(fast)
+# Loading work.ascon_top_tb(fast)
+# Loading LIB_RTL.ascon_top(fast)
+# Loading LIB_RTL.permutation_xor_pour_fsm(fast)
+# Loading LIB_RTL.xor_up(fast)
+# Loading LIB_RTL.constant_addition(fast)
+# Loading LIB_RTL.substitution_layer(fast)
+# Loading LIB_RTL.sbox(fast)
+# Loading LIB_RTL.diffusion_layer(fast)
+# Loading LIB_RTL.xor_down(fast)
+# Loading LIB_RTL.register_state(fast)
+# Loading LIB_RTL.compteur_double_init(fast)
+# Loading LIB_RTL.fsm(fast)
+# Loading LIB_RTL.register_cipher(fast)
+# Loading LIB_RTL.register_tag(fast)
+add wave -position insertpoint  \
+sim:/ascon_top_tb/tag_s \
+sim:/ascon_top_tb/start_s \
+sim:/ascon_top_tb/resetb_s \
+sim:/ascon_top_tb/nonce_s \
+sim:/ascon_top_tb/key_s \
+sim:/ascon_top_tb/end_s \
+sim:/ascon_top_tb/data_xor_up_s \
+sim:/ascon_top_tb/data_valid_s \
+sim:/ascon_top_tb/clock_s \
+sim:/ascon_top_tb/cipher_valid_s \
+sim:/ascon_top_tb/cipher_s
+add wave -position insertpoint  \
+sim:/ascon_top_tb/DUT/fsm_inst/next_state_s \
+sim:/ascon_top_tb/DUT/fsm_inst/current_state_s
+run 850 ns
+# End time: 17:59:53 on May 12,2024, Elapsed time: 0:04:53
+# Errors: 0, Warnings: 0
